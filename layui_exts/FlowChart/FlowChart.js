@@ -288,7 +288,7 @@ layui.define(['laytpl', 'element', 'layer', 'code'], function (exports) {
         $('.layui-FlowChart-BottomMenu li').each(function (i, e) {
             $(e).find('img').on('click', function () {
                 //隐藏除当前操作的其他按钮
-                $("<div class='addbox' ><input type='text' name='go' placeholder='快捷键'>" +
+                $("<div class='addbox' ><input type='text' name='go' placeholder='URL'>" +
                     "<input type='text' name='text' placeholder='名称'>" +
                     '<i class="layui-icon layui-icon-ok" style="font-size: 30px; color: #f64;" ></i>  ').appendTo($(this).parent());
                 $(this).parent().siblings().find('.addbox').remove();
