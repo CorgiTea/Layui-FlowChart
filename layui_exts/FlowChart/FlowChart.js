@@ -263,12 +263,12 @@ layui.define(['laytpl', 'element', 'layer', 'code'], function (exports) {
             obj.sta = sta;
             datas.push(obj);
         });
-        if (typeof(_config.Savedata) === 'object') {
-            obj = _config.Savedata;
+        if (typeof(_config.saveDate) === 'object') {
+            obj = _config.saveDate;
         } else {
             obj = {};
             obj.action = MOD_NAME;
-            obj.menucode = _config.PageIndex;
+            obj.menucode = _config.pageIndex;
 
         }
         obj.data = datas;

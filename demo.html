@@ -20,7 +20,7 @@
     }).use(['element','FlowChart'], function () {
 
         var FlowChart = layui.FlowChart;
-        var op = [
+        var arr = [
             {
                 "left": "596px",
                 "top": "58px",
@@ -54,7 +54,6 @@
             elem:'#box'
             /*AJAX请求地址*/
             ,url :'/main/getajax'
-            ,PageIndex:"so"
             ,ImageURL:[
                 urlstr + "nav_icon_1.png",
                 urlstr + "nav_icon_2.png",
@@ -69,20 +68,30 @@
                 urlstr + "line_12.png",
                 urlstr + "line_13.png",
             ]
-            // 赋值
-            ,data:op
-            // 保存到缓存
+            // 赋值渲染
+            ,data:arr
+            // 保存到缓存测试
             ,chartTest:false
             // 保存提示信息
             ,saveMsg:"保存中.."
+            // 保存后回调
             ,callBack:function (data) {
                 console.log(data)
             }
+            // 点击当前图标的回调 ，编辑状态下无法跳转
             ,link:function (elem) {
                 console.log(elem)
             }
-            /*保存代码结构 已有data*/
-            ,Savedata:{
+            // 页面唯一识别 默认数据中的，我原来的业务使用到，可以删除，并Savedata自定义
+            ,pageIndex:"so"
+            /*
+            *自定义提交数据结构 已有data,尽量使用其他
+            * 默认数据
+            * obj.action = MOD_NAME;
+            * obj.menucode = _config.PageIndex;
+            * obj.data = [];
+            */
+            ,saveData:{
                 "a":123,
                 "b":456,
             }
