@@ -1,0 +1,140 @@
+
+/* 样式加载完毕的标识 */
+html #layuicss-FlowChart{display: none; position: absolute; width: 100%;}
+
+.layui-FlowChart{
+    /*width: 1000px;*/
+    position: relative;
+    overflow: auto;
+}
+.layui-FlowChart-border{
+    border: 5px dashed #e5e5e5;
+}
+.layui-FlowChart>div,.layui-FlowChart>div>div span,.layui-FlowChart>div i{
+    position: absolute;
+    cursor: pointer;
+}
+.layui-FlowChart>div>div{
+    padding: 15px;
+}
+
+.layui-FlowChart>div i{
+    top: 0;
+    right: 0;
+}
+.layui-FlowChart>div i:hover{
+    color: #eb8f00;
+}
+.layui-FlowChart>div>div span {
+    right:0;
+    top:0;
+}
+.layui-FlowChart>div>div span:hover{
+    color: #14a67e;
+}
+.layui-FlowChart p{
+    text-align: center;
+    color:#14a67e;
+    overflow: hidden;
+}
+.layui-FlowChart a:focus ,.layui-FlowChart button::-moz-focus-inner{
+    outline:none;
+    border: 0;
+    -moz-outline:none;
+}
+.layui-FlowChart-RightMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*图标列表*/
+.layui-FlowChart-BottomMenu{
+    text-align: center;
+}
+.layui-FlowChart-BottomMenu {
+    margin: 0 auto;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    border-radius: 10px;
+}
+.layui-FlowChart-BottomMenu  li{
+    width: 5%;
+    height: 5%;
+    margin: 0 5px;
+    display: inline-block;
+    transition: all .3s;
+    cursor: pointer;
+    position: relative;
+}
+.layui-FlowChart-BottomMenu  img,.box img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.layui-FlowChart .blur {
+    -webkit-filter: blur(3px); /* Chrome, Opera */
+    -moz-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+.layui-FlowChart-BottomMenu .addbox{
+    width: 60px;
+    position: absolute;
+    top: -80px;
+    left: 19%;
+}
+.layui-FlowChart-BottomMenu .addbox input{
+    width: 100%;
+    margin: 3px;
+}
+.layui-FlowChart .info-content {
+    height: 285px;
+    border: 1px solid #ccc;
+    overflow: auto;
+}
+.layui-FlowChart .info-content li{
+    position: relative;
+    border-bottom: 1px dashed gray;
+}
+.layui-FlowChart .info-content li:hover{
+    background-color: #e5e5e5;
+    transition: all .5s;
+
+}
+.layui-FlowChart .info-content p{
+    text-align: center;
+}
+.layui-FlowChart .info-content li .click{
+    position: absolute;
+    right: 15px;
+}
+.layui-FlowChart .info-logo{
+    margin-left: 10px;
+}
+.layui-FlowChart .info-header .layui-icon{
+    font-size: 20px;
+}
+.layui-FlowChart .info-bg{
+    background-color: #d2d2d2;
+    color: black;
+}
+.layui-FlowChart .help{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    width:200px;
+}
+.layui-FlowChart .help>i{
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+}
+.layui-FlowChart .help ul{
+    display: none;
+    background-color: rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 10px;
+}

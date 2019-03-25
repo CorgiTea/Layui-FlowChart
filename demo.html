@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layui-FlowChart流程图demo</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script src="layui/layui.js" type="text/javascript"></script>
+<script type="text/javascript">
+    layui.config({
+        base: 'layui_exts/'
+    }).extend({
+        FlowChart: 'FlowChart/FlowChart'
+    }).use(['element','FlowChart'], function () {
+
+        var FlowChart = layui.FlowChart;
+        var op = [
+            {
+                "left": "596px",
+                "top": "58px",
+                "url": "so",
+                "indexno": "",
+                "text": "销售单",
+                "img": "layui_exts/FlowChart/image/nav_icon_1.png",
+                "sta": "new"
+            },
+            {
+                "left": "777px",
+                "top": "57px",
+                "url": "OD",
+                "indexno": "",
+                "text": "送货",
+                "img": "layui_exts/FlowChart/image/nav_icon_2.png",
+                "sta": "new"
+            },
+            {
+                "left": "686px",
+                "top": "83px",
+                "url": "",
+                "indexno": "",
+                "text": "自定义",
+                "img": "layui_exts/FlowChart/image/line_1.png",
+                "sta": "new"
+            }
+        ];
+        var urlstr = "layui_exts/FlowChart/image/";
+        FlowChart.render({
+            elem:'#box'
+            /*AJAX请求地址*/
+            ,url :'/main/getajax'
+            ,PageIndex:"so"
+            ,ImageURL:[
+                urlstr + "nav_icon_1.png",
+                urlstr + "nav_icon_2.png",
+                urlstr + "nav_icon_3.png",
+                urlstr + "nav_icon_4.png",
+                urlstr + "nav_icon_5.png",
+                urlstr + "nav_icon_6.png",
+                urlstr + "nav_icon_7.png",
+                urlstr + "nav_icon_8.png",
+                urlstr + "line_1.png",
+                urlstr + "line_6.png",
+                urlstr + "line_12.png",
+                urlstr + "line_13.png",
+            ]
+            // 赋值
+            ,data:op
+            // 保存到缓存
+            ,chartTest:false
+            // 保存提示信息
+            ,saveMsg:"保存中.."
+            ,callBack:function (data) {
+                console.log(data)
+            }
+            ,link:function (elem) {
+                console.log(elem)
+            }
+            /*保存代码结构 已有data*/
+            ,Savedata:{
+                "a":123,
+                "b":456,
+            }
+        });
+    })
+</script>
+</html>
