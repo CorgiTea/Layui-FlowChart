@@ -1,5 +1,8 @@
 # Layui-FlowChart
 
+预览地址
+
+https://corgitea.github.io/Layui-FlowChart/index.html
  ~~~
  基于Layui开发，公司之前用到这个功能，自己用的散装代码...
  这次重新梳理了一下。
